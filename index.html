@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<html>
+<body>
+<main>
+    <div class="container m3">
+
+        <form>
+            <div class="mb-8">
+                <h2 class="display-2">Kalkulator walut</h2>
+            </div>
+            <div>
+                <div class="mb-3">
+                    <label class="form-label" for="effective-date">Data ważności kursów</label>
+                    <input class="form-control" type="date" name="effective-date" id="effective-date" value="2023-01-01"/>
+                    <span id="error" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="border p-3">
+                <fieldset>
+                    <div class="mb-3">
+                        <input class="form-check-input" checked type="radio" name="mode" id="ask" value="ask"/>
+                        <label class="form-label" for="ask">Kurs kupna</label>
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-check-input" type="radio" name="mode" id="bid" value="bid"/>
+                        <label class="form-label" for="bid">Kurs sprzedaży</label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="row">
+                <h2 id="input-amount-label">Chcę dostać</h2>
+                <div class="col">
+                    <div class="mb-3">
+                        <label class="form-label" for="input-currency-code">Waluta</label>
+                        <select class="form-select" id="input-currency-code">
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="mb-3">
+                        <label class="form-label" for="input-amount">Kwota</label>
+                        <input class="form-control input-lg" id="input-amount" type="number" value="100"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <h2 id="output-amount-label">Płacę</h2>
+                <div class="col">
+                    <div class="mb-3">
+                        <label class="form-label" for="output-currency-code">Waluta</label>
+                        <select class="form-select" id="output-currency-code"></select>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="mb-3">
+                        <label class="form-label" for="output-amount">Kwota obliczona</label>
+                        <H2 id="output-amount">0.0 PLN</H2>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mb-3">
+                <button class="btn btn-primary" type="button" id="calculateBtn">Przelicz</button>
+            </div>
+        </form>
+    </div>
+</main>
+<script src="sol.js"></script>
+</body>
+</html>
